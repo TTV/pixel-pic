@@ -5,8 +5,13 @@
   "author": "TTV69",
   "dependencies": {
     "serialport": "*",
-    "formidable@latest": "*",
+    "formidable": "*",
     "get-pixels": "*",
     "fs-extra": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TTV/pixel-pic"
+  },
+  "license" : "BSD-3-Clause"
 }
