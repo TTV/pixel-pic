@@ -1,0 +1,12 @@
+{
+  "name": "pixel-pic",
+  "version": "0.1.0",
+  "description": "Provide web interface to upload image and send over serial to auduino powered pixel driver",
+  "author": "TTV69",
+  "dependencies": {
+    "serialport": "*",
+    "formidable@latest": "*",
+    "get-pixels": "*",
+    "fs-extra": "*"
+  }
+}
