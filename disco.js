@@ -1,33 +1,22 @@
-/*
-var SerialPort = require("serialport");
-SerialPort.list(function(err, ports) {
-  ports.forEach(function(port) {
-	console.log(port.comName);
-	console.log(port.pnpId);
-	console.log(port.manufacturer);
-  });
-});
-*/
-
 var Twitter = require("twitter");
 var http = require("http");
 var SerialPort = require("serialport").SerialPort;
 
 var comPort = "COM6";
 var nLEDS = 4;
-var speed = 40;
+
+var speed = 50;
 var mask = "001";
 
 var client = new Twitter({
-	consumer_key: "yrfKuYphzq8lFrqm72s6etiI4",
-	consumer_secret: "b1hOmDonz1cNllAItWe3lJaqE27EUnSpbj3RFTJGEFhYrbd9hW",
-	access_token_key: "707197523899842560-LSJ2zQ2JS9xFVQ1NpmMkNsTBABaHDWq",
-	access_token_secret: "hpCSMpplSr84C4SLXeJrwHOSDJE7Qo35FqnWhvABGJpfj"
+	consumer_key: "",
+	consumer_secret: "",
+	access_token_key: "",
+	access_token_secret: ""
 });
+var params = {screen_name: "FunkDiscoLights"};
 
 var last_tweet = "";
-
-var params = {screen_name: "FunkDiscoLights"}; // tetris
 
 function twitterCheck() {
 	client.get("statuses/mentions_timeline", params, function(error, tweets, response) {
